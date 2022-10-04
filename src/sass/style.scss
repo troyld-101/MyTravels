@@ -1,14 +1,14 @@
 //LoginAdmin
-// #root {
-//   background: url("https://lh3.googleusercontent.com/3yoi84AnUtk8NCjV2S-w67oLudCV2V-r_GG0cPrpQkN25SIHTN2yqqs5GiKerymG24FrfoaTce7ZoOUYU2UOSQ32j_ojP4LFaauC3tw9t2pP-13qo5fDQzf8jS_cbkNITbta9iWUWw=w2400")
-//     no-repeat center center fixed;
-//   background-size: cover;
-// }
-// .App {
-//   background: url("https://lh3.googleusercontent.com/3yoi84AnUtk8NCjV2S-w67oLudCV2V-r_GG0cPrpQkN25SIHTN2yqqs5GiKerymG24FrfoaTce7ZoOUYU2UOSQ32j_ojP4LFaauC3tw9t2pP-13qo5fDQzf8jS_cbkNITbta9iWUWw=w2400")
-//     no-repeat center center fixed;
-//   background-size: cover;
-// }
+.login-card {
+  box-shadow: 20px 10.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  border: solid lightgray;
+}
+
+//Register
+.signup {
+  box-shadow: 20px 10.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  border: solid lightgray;
+}
 
 //Home
 nav {
@@ -76,4 +76,10 @@ nav {
     border-radius: 10px;
     margin-bottom: 10px;
   }
+}
+//Wishlist
+.input {
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
 }

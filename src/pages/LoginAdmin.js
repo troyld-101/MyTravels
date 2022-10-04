@@ -37,6 +37,7 @@ const LoginAdmin = () => {
   return (
     <>
       <Container
+        id="loginstyle"
         className="d-flex align-items-center justify-content-center"
         style={{ minHeight: "100vh" }}
       >

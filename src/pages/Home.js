@@ -5,6 +5,7 @@ import clipart from "../pics/travel1.jpg";
 import Navy from "../components/Navy";
 import Card from "../components/Card";
 import places from "../places";
+import Wishlist from "../components/Wishlist.js";
 
 const Home = () => {
   const [error, setError] = useState();
@@ -49,6 +50,7 @@ const Home = () => {
           description={item.description}
         />
       ))}
+      <Wishlist />
     </div>
   );
 };

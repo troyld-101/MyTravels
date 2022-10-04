@@ -29,7 +29,7 @@ const RegisterAdmin = () => {
 
     try {
       setError("");
-      setLoading(true);
+      setLoading(true); //disables multiple clicking of button
       await signup(emailRef.current.value, passwordRef.current.value);
       navigate("/loginAdmin");
     } catch (e) {
@@ -85,9 +85,13 @@ const RegisterAdmin = () => {
                   ref={passwordConfirmRef}
                 />
 
-                <button className="w-100 mt-5" disabled={loading}>
+                <Button
+                  className="w-100 mt-5 btn-success"
+                  disabled={loading}
+                  type="submit"
+                >
                   Sign Up
-                </button>
+                </Button>
               </Form>
               <p>
                 Already registered?

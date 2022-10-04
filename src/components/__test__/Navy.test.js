@@ -7,21 +7,23 @@ import {
 } from "@testing-library/react";
 //import { Form, Button, Card, Container } from "react-bootstrap";
 jest.mock("firebase/auth"); //Had Mock Firebase to do any testing
-jest.mock("firebase/app");
-jest.mock("react-bootstrap");
-import { AuthProvider } from "../../context/AuthContext"; //Wrap AuthProvider around test component
+// jest.mock("firebase/app");
+// jest.mock("react-bootstrap");
+// jest.mock("@firebase/firestore");
+// import { AuthProvider } from "../../context/AuthContext"; //Wrap AuthProvider around test component
 import React from "react";
 import "@testing-library/jest-dom";
-//import App from "../../App";
+import App from "../../App";
 import Card from "../Card.js";
 import Navy from "../Navy.js";
 import Home from "../../pages/Home";
 import ReactDOM from "react-dom";
 import { async } from "@firebase/util";
 
+//MockFirebase.override();
 afterEach(cleanup);
 
-// it("render button incorrectly", () => {
+// it("render button correctly", () => {
 //   const { queryByTitle } = render(
 //     // <AuthProvider>
 //     //   <LoginAdmin />
@@ -30,7 +32,7 @@ afterEach(cleanup);
 //   );
 //   const btn = queryByTitle("child");
 //   //console.log(btn); null
-//   expect(btn).toBeFalsy();
+//   expect(btn).toBeUndefined();
 // });
 
 test("render Navy component in the document", () => {
@@ -66,4 +68,9 @@ test("should navigate to google maps url when link is clicked", () => {
   const link = getByRole("link");
   fireEvent.click(link);
   expect(screen.getByRole("link")).toHaveAttribute("href", "google.com/maps");
+});
+
+it("Render Navy Pic", () => {
+  render(<Navy />);
+  expect(screen.getByAltText("meNavy")).toBeInTheDocument();
 });
